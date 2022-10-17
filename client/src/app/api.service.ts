@@ -9,8 +9,11 @@ export class ApiService {
   constructor(private httpClient: HttpClient) {
    }
 
-  helloWorld(){
-    return this.httpClient.get<string>('/api/hello_world');
+  claimVoteTokens(body: any){
+    return this.httpClient.post<any>("http://localhost:3000/claim-voting-tokens", body);
+  }
 
+  vote(body: any){
+    return this.httpClient.post<any>("http://localhost:3000/vote", body); 
   }
 }

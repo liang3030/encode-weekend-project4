@@ -18,22 +18,30 @@
           >
           <div class="form-group">
             <label for="voteInput2">Proposal Index</label>
-            <input
+            <input 
+              type="text"
               class="form-control"
               id="proposalIndex"
               placeholder="Enter proposal index"
+              formControlName="proposal"
             />
           </div>
           <div class="form-group">
             <label for="voteInput3">Proposal Amount</label>
             <input
+              type="text"
               class="form-control"
               id="proposalAmount"
               placeholder="Enter proposal amount"
+              formControlName="amount"
             />
           </div>
         </div>
-        <button type="vote" class="btn btn-primary">Vote</button>
+        <button 
+        type="button"
+        class="btn btn-primary btn-lg px-4 gap-3" 
+        (click)="vote()"> Vote 
+        </button>
       </form>
     </div>
   </div>

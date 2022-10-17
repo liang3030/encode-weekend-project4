@@ -7,13 +7,8 @@ import { ApiService } from './api.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  helloWorld: string = '';
-
-  constructor(private apiService: ApiService) {
-  }
-
-  ngOnInit() {
-     this.apiService.helloWorld().subscribe(res=> console.log(res))
+  export class AppComponent {
+    title = 'encode-weekend-project4';
   }
 
 
