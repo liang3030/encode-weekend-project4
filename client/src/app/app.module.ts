@@ -4,21 +4,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ApiService } from './api.service';
 import { HttpClientModule } from '@angular/common/http';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    NgbModule,
-    AppRoutingModule,
-    HttpClientModule,
-  ],
+  declarations: [AppComponent, HomeComponent],
+  imports: [BrowserModule, NgbModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, HomeComponent],
 })
-export class AppModule { }
+export class AppModule {}

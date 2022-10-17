@@ -1,0 +1,78 @@
+<h3 class="bd-title" id="content">Voting on contract: {{ contractAddress }}</h3>
+<div class="row">
+  <div class="card" style="width: 30rem">
+    <div class="card-header">Cast Vote</div>
+    <div class="card-body">
+      <h5 class="card-title">Vote on your favorite proposal</h5>
+      <form>
+        <div class="form-group">
+          <label for="voteInput1">Private Key</label>
+          <input
+            class="form-control"
+            id="signerPrivateKey"
+            aria-describedby="privateKeyHelp"
+            placeholder="Enter privatekey"
+          />
+          <small id="privateKeyHelp" class="form-text text-muted"
+            >USE ONLY TEST ACCOUNTS.</small
+          >
+          <div class="form-group">
+            <label for="voteInput2">Proposal Index</label>
+            <input
+              class="form-control"
+              id="proposalIndex"
+              placeholder="Enter proposal index"
+            />
+          </div>
+          <div class="form-group">
+            <label for="voteInput3">Proposal Amount</label>
+            <input
+              class="form-control"
+              id="proposalAmount"
+              placeholder="Enter proposal amount"
+            />
+          </div>
+        </div>
+        <button type="vote" class="btn btn-primary">Vote</button>
+      </form>
+    </div>
+  </div>
+  <div class="card" style="width: 30rem">
+    <div class="card-header">Delegate Vote</div>
+    <div class="card-body">
+      <h5 class="card-title">Self Delegate or Give to Others</h5>
+      <form>
+        <div class="form-group">
+          <label for="delegateInput1">Private Key</label>
+          <input
+            class="form-control"
+            id="signerPrivateKey"
+            aria-describedby="privateKeyHelp"
+            placeholder="Enter privatekey"
+          />
+          <small id="privateKeyHelp" class="form-text text-muted"
+            >USE ONLY TEST ACCOUNTS.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="delegateInput2">Delegate Address</label>
+          <input
+            class="form-control"
+            id="delegateAddress"
+            placeholder="Enter address you wish to delegate too"
+          />
+        </div>
+        <button type="delegate" class="btn btn-primary">Delegate</button>
+      </form>
+    </div>
+  </div>
+  <div class="card" style="width: 30rem">
+    <div class="card-header">Query Proposal Results</div>
+    <div class="card-body">
+      <button type="submit" class="btn btn-primary">
+        🏆 Display Winner! 🏆
+      </button>
+      <p>The winning proposal is: {{ winningProposal }}</p>
+    </div>
+  </div>
+</div>
